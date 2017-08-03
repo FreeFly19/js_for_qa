@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom manipulation</title>
+</head>
+<body>
+
+
+
+Comment: <input type="text" id="comment-inp">
+<button onclick="addComment()">Add</button><br>
+
+Comments:
+<ul id="comment-list"></ul>
+
+<button onclick="clearCommentList()">Clear</button>
+
+
+
+<script>
+    let commentInp = document.getElementById("comment-inp");
+    let commentList = document.getElementById("comment-list");
+
+    function addComment() {
+        let commentEl = document.createElement("li");
+        commentEl.textContent = commentInp.value;
+        commentList.appendChild(commentEl);
+
+        commentInp.value = '';
+    }
+
+    function clearCommentList() {
+        let children = commentList.childNodes;
+
+        for (let i = children.length - 1; i >= 0; i--) {
+            commentList.removeChild(children[i]);
+        }
+    }
+
+    /*  Event delegation */
+    commentList.addEventListener('click', (event) => {
+        if (event.target.parentNode === commentList) {
+            commentList.removeChild(event.target);
+        }
+    });
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

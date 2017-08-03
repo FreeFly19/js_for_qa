@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom events</title>
+</head>
+<body>
+
+<button id="someBtn">Hello :)</button>
+
+<script>
+    let b1 = document.getElementById("someBtn");
+
+    b1.addEventListener('click', () => {
+        b1.textContent = 'Have you clicked me?';
+    });
+
+    b1.addEventListener('dblclick', () => {
+        b1.textContent = 'Hey! Stop it!';
+    });
+</script>
+
+</body>
+</html>

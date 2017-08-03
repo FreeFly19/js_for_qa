@@ -1,0 +1,5 @@
+nodemon -q -x "clear && node 1_data_types.js"
+nodemon -q -x "clear && node 2_function_basic.js"
+nodemon -q -x "clear && node hack.js"
+
+https://codepen.io/alexander-melnyk/pen/jLMBGj
