@@ -9,8 +9,8 @@ console.log(res);
 // <value> instanceof <Constructor(class)>
 
 // console.log();
-// console.log({name: "Oleg"} instanceof Object);
-// console.log({name: "Oleg"} instanceof Function);
+// console.log({name: "Valera"} instanceof Object);
+// console.log({name: "Valera"} instanceof Function);
 
 
 
